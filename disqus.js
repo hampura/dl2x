@@ -4,20 +4,12 @@ console.info(
 );
 
 $('#info').click(function() {
-	$('#komentarDisqus').slideDown();
+	$('#komentarDisqus').slideDown()
 });
 
 $('#tutupKomentar').click(function() {
-	$('#komentarDisqus').slideUp();
+	$('#komentarDisqus').slideUp()
 });
-
-switch (dl2xJudul) {
-	case 'God of Martial Arts':
-		var dl2xDomain = 'site';
-		break;
-	default:
-		var dl2xDomain = 'com';
-}
 
 switch (dl2xFtl) {
 	case 'kiryuu':
@@ -29,7 +21,7 @@ switch (dl2xFtl) {
 		break;
 	case 'komikcast':
 		dl2xUser = 'komikcastnet',
-		pageUrl = 'https:\/\/komikcast.' + dl2xDomain + '\/chapter\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile + '-bahasa-indonesia';
+		pageUrl = 'https:\/\/komikcast.lol\/chapter\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile + '-bahasa-indonesia';
 		break;
 	case 'komikindo':
 		dl2xUser = 'komikindo-co',

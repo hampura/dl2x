@@ -1,3 +1,9 @@
+function hapus0() {
+	if (chFile.length === 2 && chFile.charAt(0) === '0') {
+		chFile = chFile.charAt(1);
+	}
+}
+
 console.info(
 	'%cKomentar Disqus telah terhubung dengan ' + dl2xFtl,
 	'color:cyan'
@@ -13,9 +19,7 @@ $('#tutupKomentar').click(function() {
 
 switch (dl2xFtl) {
 	case 'kiryuu':
-		if (chFile.length === 2 && chFile.charAt(0) === '0') {
-			chFile = chFile.charAt(1);
-		}
+		hapus0();
 		dl2xUser = 'kiryuu-id',
 		pageUrl = 'https:\/\/kiryuu.id\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
 		break;
@@ -30,6 +34,10 @@ switch (dl2xFtl) {
 	case 'mangakita':
 		dl2xUser = 'mangakita',
 		pageUrl = 'https:\/\/mangakita.id\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile + '-bahasa-indonesia';
+		break;
+	case 'mangatale':
+		dl2xUser = 'baca-manga-4',
+		pageUrl = 'https:\/\/mangatale.co\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
 		break;
 	case 'shinigami':
 		dl2xUser = 'reaperid',

@@ -18,6 +18,10 @@ $('#tutupKomentar').click(function() {
 });
 
 switch (dl2xFtl) {
+	case 'apkomik':
+		dl2xUser = 'komikav-com',
+		pageUrl = 'https:\/\/apkomik.cc\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile + '-bahasa-indonesia';
+		break;
 	case 'kiryuu':
 		hapus0();
 		dl2xUser = 'kiryuu-id',
@@ -42,6 +46,10 @@ switch (dl2xFtl) {
 	case 'shinigami':
 		dl2xUser = 'reaperid',
 		pageUrl = 'https:\/\/home.shinigami.cx\/series\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '\/chapter-' + chFile;
+		break;
+	case 'tukangkomik':
+		dl2xUser = 'tukangkomik-com-1',
+		pageUrl = 'https:\/\/tukangkomik.id\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
 }
 
 var disqus_config = function() {

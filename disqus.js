@@ -45,7 +45,7 @@ switch (dl2xFtl) {
 		break;
 	case 'shinigami':
 		dl2xUser = 'reaperid',
-		pageUrl = 'https:\/\/shinigamitoon.id\/series\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '\/chapter-' + chFile;
+		pageUrl = 'https:\/\/home.shinigami.cx\/series\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '\/chapter-' + chFile;
 		break;
 	case 'tukangkomik':
 		dl2xUser = 'tukangkomik-com-1',

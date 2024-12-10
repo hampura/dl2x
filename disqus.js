@@ -25,19 +25,20 @@ switch (dl2xFtl) {
 	case 'kiryuu':
 		hapus0();
 		dl2xUser = 'kiryuu-id',
-		pageUrl = 'https:\/\/kiryuu.id\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
+		pageUrl = 'https:\/\/kiryuu.one\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
 		break;
 	case 'komikcast':
 		dl2xUser = 'komikcastnet',
-		pageUrl = 'https:\/\/komikcast.lol\/chapter\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile + '-bahasa-indonesia';
+		pageUrl = 'https:\/\/komikcast.bz\/chapter\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile + '-bahasa-indonesia';
 		break;
 	case 'komikindo':
+	case 'komiksin':
 		dl2xUser = 'komikindo-co',
-		pageUrl = 'https:\/\/komikindo.co\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
+		pageUrl = 'https:\/\/komiksin.id\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
 		break;
 	case 'mangakita':
 		dl2xUser = 'mangakita',
-		pageUrl = 'https:\/\/mangakita.id\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile + '-bahasa-indonesia';
+		pageUrl = 'https:\/\/mangakita.id\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
 		break;
 	case 'mangatale':
 		dl2xUser = 'baca-manga-4',
@@ -48,8 +49,8 @@ switch (dl2xFtl) {
 		pageUrl = 'https:\/\/home.shinigami.cx\/series\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '\/chapter-' + chFile;
 		break;
 	case 'tukangkomik':
-		dl2xUser = 'tukangkomik-com-1',
-		pageUrl = 'https:\/\/tukangkomik.id\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
+		dl2xUser = 'tukangkomik-co',
+		pageUrl = 'https:\/\/tukangkomik.co\/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
 }
 
 var disqus_config = function() {

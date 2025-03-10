@@ -20,29 +20,29 @@ $('#tutupKomentar').click(function() {
 switch (dl2xFtl) {
 	case 'apkomik':
 		dl2xUser = 'komikav-com',
-		pageUrl = 'https://apkomik.cc/' + dl2xJudul.toLowerCase().replace(/s+/g, '-') + '-chapter-' + chFile + '-bahasa-indonesia';
+		pageUrl = 'https://apkomik.cc/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile + '-bahasa-indonesia';
 		break;
 	case 'kiryuu':
 		hapus0();
 		dl2xUser = 'kiryuu-id',
-		pageUrl = 'https://kiryuu01.com/' + dl2xJudul.toLowerCase().replace(/s+/g, '-') + '-chapter-' + chFile;
+		pageUrl = 'https://kiryuu01.com/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
 		break;
 	case 'komikcast':
 		dl2xUser = 'komikcastnet',
-		pageUrl = 'https://komikcast.bz/chapter/' + dl2xJudul.toLowerCase().replace(/s+/g, '-') + '-chapter-' + chFile + '-bahasa-indonesia';
+		pageUrl = 'https://komikcast.bz/chapter/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile + '-bahasa-indonesia';
 		break;
 	case 'komikindo':
 	case 'komiksin':
 		dl2xUser = 'komikindo-co',
-		pageUrl = 'https://komiksin.id/' + dl2xJudul.toLowerCase().replace(/s+/g, '-') + '-chapter-' + chFile;
+		pageUrl = 'https://komiksin.id/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
 		break;
 	case 'mangakita':
 		dl2xUser = 'mangakita',
-		pageUrl = 'https://mangakita.id/' + dl2xJudul.toLowerCase().replace(/s+/g, '-') + '-chapter-' + chFile;
+		pageUrl = 'https://mangakita.id/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
 		break;
 	case 'mangatale':
 		dl2xUser = 'baca-manga-4',
-		pageUrl = 'https://mangatale.co/' + dl2xJudul.toLowerCase().replace(/s+/g, '-') + '-chapter-' + chFile;
+		pageUrl = 'https://mangatale.co/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
 		break;
 	case 'shinigami':
 		if ($('del').length) {
@@ -50,12 +50,12 @@ switch (dl2xFtl) {
 			pageUrl = 'https://dsq.shinigami.gg/chapter/' + dl2xJudul
 		} else {
 			dl2xUser = 'reaperid',
-			pageUrl = 'https://home.shinigami.cx/series/' + dl2xJudul.toLowerCase().replace(/s+/g, '-') + '/chapter-' + chFile;
+			pageUrl = 'https://home.shinigami.cx/series/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '/chapter-' + chFile;
 		}
 		break;
 	case 'tukangkomik':
 		dl2xUser = 'tukangkomik-co',
-		pageUrl = 'https://tukangkomik.co/' + dl2xJudul.toLowerCase().replace(/s+/g, '-') + '-chapter-' + chFile;
+		pageUrl = 'https://tukangkomik.co/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
 }
 
 var disqus_config = function() {

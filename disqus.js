@@ -45,9 +45,9 @@ switch (dl2xFtl) {
 		pageUrl = 'https://mangatale.co/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
 		break;
 	case 'shinigami':
-		if ($('del').length) {
+		if ($('del').length === 0) {
 			dl2xUser = 'dewakematian',
-			pageUrl = 'https://dsq.shinigami.gg/chapter/' + dl2xJudul
+			pageUrl = 'https://dsq.shinigami.gg/chapter/' + dl2xJudul;
 		} else {
 			dl2xUser = 'reaperid',
 			pageUrl = 'https://home.shinigami.cx/series/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '/chapter-' + chFile;

@@ -29,7 +29,7 @@ switch (dl2xFtl) {
 		break;
 	case 'komikcast':
 		dl2xUser = 'komikcastnet',
-		pageUrl = 'https://komikcast.bz/chapter/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile + '-bahasa-indonesia';
+		pageUrl = 'https://komikcast.fun/chapter/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile + '-bahasa-indonesia';
 		break;
 	case 'komikindo':
 	case 'komiksin':

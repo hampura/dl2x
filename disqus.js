@@ -53,7 +53,7 @@ switch (dl2xFtl) {
 		}
 		break;
 	case 'tukangkomik':
-		dl2xUser = 'tukangkomik-co',
+		dl2xUser = 'tukang',
 		pageUrl = 'https://' + dl2xDomain + '/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
 }
 

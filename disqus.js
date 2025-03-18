@@ -1,10 +1,3 @@
-buttons = document.querySelectorAll('button');
-buttons.forEach(function(button) {
-	if (button.getAttribute('onclick') === 'maps') {
-		button.setAttribute('onclick', 'maps()')
-	}
-});
-
 function hapus0() {
 	if (chFile.length === 2 && chFile.charAt(0) === '0') {
 		chFile = chFile.charAt(1)
@@ -16,7 +9,7 @@ console.info(
 	'color:cyan'
 );
 
-$('#info').click(function() {
+$('button[onclick="maps"]').attr('onclick', 'maps()'), $('#info').click(function() {
 	$('#komentarDisqus').slideDown()
 }), $('#tutupKomentar').click(function() {
 	$('#komentarDisqus').slideUp()

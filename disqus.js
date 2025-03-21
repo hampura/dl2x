@@ -45,7 +45,7 @@ switch (dl2xFtl) {
 	case 'shinigami':
 		if ($('del').length === 1) {
 			dl2xJudul = $('del').text(),
-			dl2xUser = 'dewakematian',
+			dl2xUser = 'dewakematians',
 			pageUrl = 'https://dsq.shinigami.gg/chapter/' + dl2xJudul;
 		} else {
 			dl2xUser = 'reaperid',

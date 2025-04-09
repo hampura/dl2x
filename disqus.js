@@ -15,7 +15,7 @@ function komentarLama() {
 		break; case 'mangatale': dl2xUser = 'baca-manga-4', pageUrl = 'https://' + dl2xDomain + '/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
 		break; case 'shinigami': dl2xUser = 'reaperid', 	pageUrl = 'https://home.shinigami.cx/series/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '/chapter-' + chFile;
 		break; case 'tukangkomik': dl2xUser = 'tukang', pageUrl = 'https://' + dl2xDomain + '/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile;
-	} cekKomentar()
+	} komentarDq()
 }
 
 function komentarBaru() {
@@ -30,10 +30,8 @@ function komentarBaru() {
 		break; case 'shinigami':	dl2xUser = 'dewakematians';
 		break; case 'tukangkomik':	dl2xUser = 'tukang';
 		break; default: return komentarFtl()
-	} cekKomentar()
-}
+	}
 
-function cekKomentar() {
 	if (dl2xFtl === 'shinigami') {
 		if ($('del').text().includes('/')) {
 			pageUrl = 'https://dsq.shinigami.gg' + dl2xJudul

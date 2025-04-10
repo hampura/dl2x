@@ -20,7 +20,7 @@ function komentarLama() {
 
 function komentarBaru() {
 	switch (dl2xFtl) {
-		case 'apkomik':				dl2xUser = 'komikav-com';
+		case 'apkomik':			dl2xUser = 'komikav-com';
 		break; case 'kiryuu':		dl2xUser = 'kiryuu-id';
 		break; case 'komikcast':	dl2xUser = 'komikcastnet';
 		break; case 'komikindo':
@@ -66,10 +66,4 @@ $('button[onclick="maps"]').attr('onclick', 'maps()'), $('#info').click(function
 	$('#komentarDisqus').slideDown()
 }), $('#tutupKomentar').click(function() {
 	$('#komentarDisqus').slideUp()
-});
-
-if ($('del').length === 1) {
-	komentarBaru()
-} else {
-	komentarLama()
-}
+}); 1 === $("del").length ? komentarBaru() : komentarLama();

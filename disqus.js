@@ -66,4 +66,4 @@ $('button[onclick="maps"]').attr('onclick', 'maps()'), $('#info').click(function
 	$('#komentarDisqus').slideDown()
 }), $('#tutupKomentar').click(function() {
 	$('#komentarDisqus').slideUp()
-}); 1 === $("del").length ? komentarBaru() : komentarLama();
+}); 1 === $('del').length ? komentarBaru() : komentarLama();

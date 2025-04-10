@@ -57,7 +57,7 @@ function komentarDq() {
 
 	s.setAttribute('data-timestamp', +new Date());
 	(d.head || d.body).appendChild(s); console.info(
-		'%cKomentar telah terhubung ke:\nhttps://' + dl2xDomain + '/' + dl2xJudul,
+		'%cKomentar telah terhubung ke:\n' + pageUrl,
 		'color:cyan'
 	)
 }

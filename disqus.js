@@ -1,7 +1,5 @@
 function hapus0() {
-	if (chFile.length === 2 && chFile.charAt(0) === '0') {
-		chFile = chFile.charAt(1)
-	}
+	2 === chFile.length && '0' === chFile.charAt(0) && (chFile=chFile.charAt(1))
 }
 
 function komentarLama() {
@@ -28,7 +26,7 @@ function komentarBaru() {
 		break; case 'mangatale':	dl2xUser = 'baca-manga-4';
 		break; case 'shinigami':	dl2xUser = 'dewakematians';
 		break; case 'tukangkomik':	dl2xUser = 'tukang';
-		break; default: return komentarFtl('Gagal menghubungkan komentar')
+		break; default: return
 	}
 
 	if (dl2xFtl === 'shinigami') {
@@ -44,7 +42,9 @@ function komentarBaru() {
 
 function komentarFtl(pesan) {
     const popup = $('<div id="popupMessage">' + pesan + '</div>').appendTo('body');
-    popup.fadeIn('slow').delay(3000).fadeOut('slow')
+    popup.fadeIn('slow').click(function() {
+		$(this).fadeOut('slow').remove()
+	})
 }
 
 function komentarDq() {
@@ -63,7 +63,7 @@ function komentarDq() {
 }
 
 $('button[onclick="maps"]').attr('onclick', 'maps()'), $('#info').click(function() {
-	$('#komentarDisqus').slideDown()
+	'undefined' === typeof pageUrl ? komentarFtl('Gagal menghubungkan komentar') : $('#komentarDisqus').slideDown()
 }), $('#tutupKomentar').click(function() {
 	$('#komentarDisqus').slideUp()
 }); 1 === $('del').length ? komentarBaru() : komentarLama();

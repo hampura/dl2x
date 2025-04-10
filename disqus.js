@@ -25,11 +25,10 @@ function komentarBaru() {
 		break; case 'komikcast':	dl2xUser = 'komikcastnet';
 		break; case 'komikindo':
 		break; case 'komiksin':		dl2xUser = 'komikindo-co';
-		break; case 'mangakita':	dl2xUser = 'mangakita';
 		break; case 'mangatale':	dl2xUser = 'baca-manga-4';
 		break; case 'shinigami':	dl2xUser = 'dewakematians';
 		break; case 'tukangkomik':	dl2xUser = 'tukang';
-		break; default: return komentarFtl()
+		break; default: return komentarFtl('Gagal menghubungkan komentar')
 	}
 
 	if (dl2xFtl === 'shinigami') {
@@ -43,6 +42,11 @@ function komentarBaru() {
 	} komentarDq()
 }
 
+function komentarFtl(pesan) {
+    const popup = $('<div id="popupMessage">' + pesan + '</div>').appendTo('body');
+    popup.fadeIn('slow').delay(3000).fadeOut('slow')
+}
+
 function komentarDq() {
 	var disqus_config = function() {
 		this.page.url = pageUrl;
@@ -52,31 +56,10 @@ function komentarDq() {
 	s.src = 'https://' + dl2xUser + '.disqus.com/embed.js';
 
 	s.setAttribute('data-timestamp', +new Date());
-	(d.head || d.body).appendChild(s)
-}
-
-function komentarFtl() {
-	const proxyUrl = 'https://api.allorigins.win/raw?url=',
-		targetUrl = encodeURIComponent('https://' + dl2xDomain + '/' + dl2xJudul);
-
-	try {
-		const response = await fetch(proxyUrl + targetUrl),
-			html = await response.text(),
-			parser = new DOMParser(),
-			doc = parser.parseFromString(html, 'text/html'),
-			comments = doc.querySelector('#comments');
-
-		if (comments) {
-			const output = comments.outerHTML;
-			$('#komentarDisqus').html(output).prepend($('#respond'));
-			$('#url').val('https://dl2x.com')
-		} else {
-			throw new Error('Elemen #comments tidak ditemukan')
-		}
-	} catch (e) {
-		console.error('Error:', e);
-		alert('Gagal: ' + e.message)
-	}
+	(d.head || d.body).appendChild(s); console.info(
+		'%cKomentar telah terhubung ke:\nhttps://' + dl2xDomain + '/' + dl2xJudul,
+		'color:cyan'
+	)
 }
 
 $('button[onclick="maps"]').attr('onclick', 'maps()'), $('#info').click(function() {
@@ -89,7 +72,4 @@ if ($('del').length === 1) {
 	komentarBaru()
 } else {
 	komentarLama()
-} console.info(
-	'%cKomentar telah terhubung ke:\nhttps://' + dl2xDomain + '/' + dl2xJudul,
-	'color:cyan'
-)
+}

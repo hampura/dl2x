@@ -37,7 +37,7 @@ function komentarBaru() {
 			dl2xJudul = $('del').text(), pageUrl = 'https://dsq.shinigami.gg/chapter/' + dl2xJudul
 		}
 	} else {
-		pageUrl = 'https://' + dl2xDomain + '/' + dl2xJudul
+		pageUrl = 'https://' + dl2xDomain + dl2xJudul
 	} komentarDq()
 }
 

@@ -23,6 +23,7 @@ function komentarBaru() {
 		break; case 'komikcast':	dl2xUser = 'komikcastnet';
 		break; case 'komikindo':
 		break; case 'komiksin':		dl2xUser = 'komikindo-co';
+		break; case 'mangakita':	dl2xUser = 'mangakita';
 		break; case 'mangatale':	dl2xUser = 'baca-manga-4';
 		break; case 'shinigami':	dl2xUser = 'dewakematians';
 		break; case 'tukangkomik':	dl2xUser = 'tukang';

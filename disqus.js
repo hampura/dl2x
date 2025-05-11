@@ -2,6 +2,21 @@ function hapus0() {
 	2 === chFile.length && '0' === chFile.charAt(0) && (chFile=chFile.charAt(1))
 }
 
+function komentarDq() {
+	disqus_config = function() {
+		this.page.url = pageUrl;
+		this.page.identifier = pageIdentifier;
+	}, d = document, s = d.createElement('script');
+
+	s.src = 'https://' + dl2xUser + '.disqus.com/embed.js';
+
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s); console.info(
+		'%cKomentar telah terhubung ke:\n' + pageUrl,
+		'color:cyan'
+	)
+}
+
 function komentarLama() {
 	switch (dl2xFtl) {
 		case 'apkomik': dl2xUser = 'komikav-com', pageUrl = 'https://' + dl2xDomain + '/' + dl2xJudul.toLowerCase().replace(/\s+/g, '-') + '-chapter-' + chFile + '-bahasa-indonesia';
@@ -24,8 +39,9 @@ function komentarBaru() {
 		break; case 'komikindo':
 		break; case 'komiksin':		dl2xUser = 'komikindo-co';
 		break; case 'mangakita':	dl2xUser = 'mangakita';
+									dl2xJudul = dl2xJudul.split(' ')[0]
 		break; case 'mangatale':	dl2xUser = 'baca-manga-4';
-		break; case 'shinigami':	dl2xUser = 'dewakematians';
+		break; case 'shinigami':	dl2xUser = 'dewakematianss';
 		break; case 'tukangkomik':	dl2xUser = 'tukang';
 		break; default: return
 	}
@@ -46,21 +62,6 @@ function komentarFtl(pesan) {
     popup.fadeIn('slow').click(function() {
 		$(this).fadeOut('slow').remove()
 	})
-}
-
-function komentarDq() {
-	var disqus_config = function() {
-		this.page.url = pageUrl;
-		this.page.identifier = pageIdentifier;
-	}, d = document, s = d.createElement('script');
-
-	s.src = 'https://' + dl2xUser + '.disqus.com/embed.js';
-
-	s.setAttribute('data-timestamp', +new Date());
-	(d.head || d.body).appendChild(s); console.info(
-		'%cKomentar telah terhubung ke:\n' + pageUrl,
-		'color:cyan'
-	)
 }
 
 $('button[onclick="maps"]').attr('onclick', 'maps()'), $('#info').click(function() {

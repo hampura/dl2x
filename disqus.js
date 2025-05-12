@@ -35,7 +35,8 @@ function komentarBaru() {
 	switch (dl2xFtl) {
 		case 'apkomik':			dl2xUser = 'komikav-com';
 		break; case 'kiryuu':		dl2xUser = 'kiryuu-id';
-		break; case 'komikcast':	dl2xUser = 'komikcastnet';
+		break; case 'komikcast':	dl2xUser = 'komikcast02-com-2';
+									dl2xJudul = dl2xJudul.split(' ')[0]
 		break; case 'komikindo':
 		break; case 'komiksin':		dl2xUser = 'komikindo-co';
 		break; case 'mangakita':	dl2xUser = 'mangakita';

@@ -49,7 +49,7 @@ function komentarBaru() {
 
 	if (dl2xFtl === 'shinigami') {
 		if ($('del').text().includes('/')) {
-			pageUrl = 'https://dsq.shinigami.gg' + dl2xJudul
+			pageUrl = 'https://dsq.shinigami.gg' + dl2xJudul.split(' ')[0]
 		} else {
 			dl2xJudul = $('del').text(), pageUrl = 'https://dsq.shinigami.gg/chapter/' + dl2xJudul
 		}

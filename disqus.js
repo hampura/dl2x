@@ -37,6 +37,7 @@ function komentarBaru() {
 		break; case 'kiryuu':		dl2xUser = 'kiryuu-id';
 		break; case 'komikcast':	dl2xUser = 'komikcast02-com-2';
 									dl2xJudul = dl2xJudul.split(' ')[0]
+		break; case 'lumos':		dl2xUser = 'teststore-3';
 		break; case 'komikindo':
 		break; case 'komiksin':		dl2xUser = 'komikindo-co';
 		break; case 'mangakita':	dl2xUser = 'mangakita';
@@ -49,7 +50,15 @@ function komentarBaru() {
 
 	if (dl2xFtl === 'shinigami') {
 		if ($('del').text().includes('/')) {
-			pageUrl = 'https://dsq.shinigami.gg' + dl2xJudul.split(' ')[0]
+			// pageUrl = 'https://dsq.shinigami.gg' + dl2xJudul.split(' ')[0]
+			const scriptUrl = 'https://app.shinigami.asia/_app/immutable/chunks/Waline.BxUKLSRk.js';
+
+			$.getScript(scriptUrl).done(function(script, textStatus) {
+				pageUrl = true;
+			}).fail(function(jqxhr, settings, exception) {
+				console.error("Gagal memuat script:", exception);
+			})
+			return;
 		} else {
 			dl2xJudul = $('del').text(), pageUrl = 'https://dsq.shinigami.gg/chapter/' + dl2xJudul
 		}

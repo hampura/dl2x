@@ -33,18 +33,20 @@ function komentarLama() {
 
 function komentarBaru() {
 	switch (dl2xFtl) {
-		case 'apkomik':			dl2xUser = 'komikav-com';
-		break; case 'kiryuu':		dl2xUser = 'kiryuu-id';
-		break; case 'komikcast':	dl2xUser = 'komikcast02-com-2';
-									dl2xJudul = dl2xJudul.split(' ')[0]
-		break; case 'lumos':		dl2xUser = 'teststore-3';
+		case 'apkomik':			dl2xUser	= 'komikav-com';
+		break; case 'kiryuu':		dl2xUser	= 'kiryuu-id';
+		break; case 'komikcast':	dl2xUser	= 'komikcast02-com-2';
+									dl2xJudul	= dl2xJudul.split(' ')[0]
+		break; case 'lumos':		dl2xUser	= 'teststore-3';
+									dl2xJudul	= dl2xJudul.split(' ')[1],
+									dl2xDomain	= new URL(dl2xJudul).hostname
 		break; case 'komikindo':
-		break; case 'komiksin':		dl2xUser = 'komikindo-co';
-		break; case 'mangakita':	dl2xUser = 'mangakita';
-									dl2xJudul = dl2xJudul.split(' ')[0]
-		break; case 'mangatale':	dl2xUser = 'baca-manga-4';
-		break; case 'shinigami':	dl2xUser = 'dewakematianss';
-		break; case 'tukangkomik':	dl2xUser = 'tukang';
+		break; case 'komiksin':		dl2xUser	= 'komikindo-co';
+		break; case 'mangakita':	dl2xUser	= 'mangakita';
+									dl2xJudul	= dl2xJudul.split(' ')[0]
+		break; case 'mangatale':	dl2xUser	= 'baca-manga-4';
+		break; case 'shinigami':	dl2xUser	= 'dewakematianss';
+		break; case 'tukangkomik':	dl2xUser	= 'tukang';
 		break; default: return
 	}
 
